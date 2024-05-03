@@ -25,8 +25,6 @@ class TasksProvider with ChangeNotifier {
 
   int get tasksCount => _tasks.length;
   Future<void> addTask(Task task) async {
-    print("task-----11$task");
-    print("task-----22${_tasks[_tasks.length-1].id}");
 
     await DatabaseHelper().insertTask(task);
     _tasks.add(task);

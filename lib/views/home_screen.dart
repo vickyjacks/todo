@@ -392,7 +392,7 @@ class TaskScreenState extends State<TaskScreen> with SingleTickerProviderStateMi
                             TextButton(
                               onPressed: () {
                                 provider.addTask(Task(
-                                  id:  provider.tasks[provider.tasks.length-1].id + 1,
+                                  id: provider.tasks.length==0?1: provider.tasks[provider.tasks.length-1].id + 1,
                                   // id: filteredTasks.length,
                                   title: _titleController.text,
                                 ));
